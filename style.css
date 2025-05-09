@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#ball{
+    width: 90px;
+    height: 90px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: moveBall 3s infinite alternate ease-in-out;
+}
+
+@keyframes moveBall {
+    from{
+        left: 0;
+        right: 10;
+        top: 50%;
+        bottom: 50%;
+    }
+    to{
+        left: calc(100vw - 100px);
+        right: calc(50vw - 50px);
+        top: 5%;
+    }
+}
+
